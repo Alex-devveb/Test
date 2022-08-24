@@ -12,10 +12,31 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/** ------ route pour les controllores ------**/
+// use App\Http\Controllers\WelcomeController;
+// Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return view('vue1');
-});
+/** ----- Route pour l'article ----- **/
+// use App\Http\Controllers\ArticleController;
+// Route::get('article/{n}', [ArticleController::class, 'show'])->where('n', '[0-9]');
+
+/** ---- route pour formulaire ---- **/
+// use App\Http\Controllers\UsersController;
+// Route::get('users', [UsersController::class, 'create']);
+// Route::post('users', [UsersController::class, 'store']);
+
+/** ---- route pour Contact ---- **/
+use App\Http\Controllers\ContactController;
+Route::get('contact', [ContactController::class, 'create']);
+Route::post('contact', [ContactController::class, 'store']);
+
+
+
+
+/** ------ route pour les autres methodes ------**/
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 /** ------- creer n page ------- **/
 // route::get('{n}', function($n) {
